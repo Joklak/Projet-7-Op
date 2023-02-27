@@ -95,7 +95,7 @@ nav a {
   overflow: hidden;
 }
 
-.cards__img {
+.cards_img {
   width: inherit;
   height: inherit;
   object-fit: cover;
@@ -114,7 +114,7 @@ nav a {
   z-index: 2;
 }
     
-.cards__title {
+.cards_title {
   position: absolute;
     bottom: 0;
     font-size: 18px;
@@ -130,7 +130,7 @@ nav a {
   margin: 0px 100px;
 }
 
-.logement__products {   
+.logement_products {   
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 40px;
@@ -167,7 +167,7 @@ nav a {
   }
   
 
-  .footer__text {
+  .footer_text {
     color: white;
     font-weight: 500;
     font-size: 20px;
@@ -381,6 +381,7 @@ color: #FF6060;
 .slider .slick-slide img {
   width: 100%;  
   object-fit: cover;
+  border-radius: 20px;
    
  }
 
@@ -440,3 +441,60 @@ color: #FF6060;
 }
 
 
+@media screen and (max-width: 767px) {
+  body {
+    margin: 20px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Montserrat';
+  }
+
+  .main {
+    margin: 0;
+    padding: 0 20px;
+  }
+
+  .logement_products {
+    grid-template-columns: 1fr;
+    row-gap: 40px;
+  }
+
+  .footer_pages {
+    height: auto;
+  }
+.footer_logo {
+  margin-top: 20px;
+}
+  .error_text {
+    margin-bottom: 42px;
+  }
+
+  .wrapper {
+    height: auto;
+    padding: 20px;
+  }
+.description_equipement_collapse {
+  flex-direction: column;
+  gap: 0px;
+}
+.singleproduct_container {
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 0px;
+}
+.singleproduct_rating_host {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  
+}
+
+.aboutpage {
+  width: 100%;
+}
+  .accordion {
+    width: 100%;
+  }
+}

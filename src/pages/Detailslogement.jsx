@@ -26,7 +26,7 @@ const Details = () => {
       <div className="singleproduct_information">
         <div className="singleproduct_container">
           <div>
-            <h1 className="singleproduct__title">{title}</h1>
+            <h1 className="singleproduct_title">{title}</h1>
             <p className="singleproduct_location">{location}</p>
             <div className="singleproduct_tags">
               {product.tags.map((tag, index) => (

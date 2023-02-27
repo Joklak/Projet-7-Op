@@ -5,7 +5,7 @@ import products from "../data/data.json";
 
 const Logement = () => {
   return (
-    <section className="logement__products">
+    <section className="logement_products">
       {products.map((product) => {
         
         return (
