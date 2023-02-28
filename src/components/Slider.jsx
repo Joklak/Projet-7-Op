@@ -25,7 +25,7 @@ function SliderComponent({ pictures }) {
          <div className="slideshow-image-container">
             <div
                className="slidershow-slider"
-               style={{ transform: ` translateX($ { -index * 100} %)` }}
+               style={{ transform: ` translateX(${-index * 100} %)` }}
             >
                {pictures.map((picture, i) => (
                   <div
