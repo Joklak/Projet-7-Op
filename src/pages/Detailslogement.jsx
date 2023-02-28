@@ -2,7 +2,7 @@ import React from 'react';
 
 import { useParams, Navigate } from 'react-router-dom';
 import products from '../data/data.json';
-import CollapseExample from '../components/Collapse';
+import CollapsibleTemplate from '../components/Collapse';
 import SliderComponent from '../components/Slider';
 import Tags from '../components/Tags';
 import Host from '../components/Host';
@@ -21,7 +21,7 @@ const Details = () => {
 
    return (
       <main className="maindetail">
-         <SliderComponent images={pictures} />
+         <SliderComponent pictures={pictures} />
          <div className="singleproduct_information">
             <div className="singleproduct_container">
                <div>
@@ -34,17 +34,28 @@ const Details = () => {
                   </div>
                </div>
                <div className="singleproduct_rating_host">
-                  <Host host={host} />
+                  <Host host={host} className="teddst" />
                   <Rating rating={rating} />
                </div>
             </div>
-            <div className="description_equipement_collapse">
-               <CollapseExample text="Description" textContent={description} />
-               <CollapseExample text="Equipement" textContent={equipments} />
+            <div className="collapsibles-container">
+               <CollapsibleTemplate label="Description">
+                  <p className="description_text"> {description} </p>
+               </CollapsibleTemplate>
+               <CollapsibleTemplate label="Equipements">
+                  <div>
+                     {' '}
+                     {equipments.map((equip, i) => (
+                        <p className="description_text" key={i}>
+                           {' '}
+                           {equip}{' '}
+                        </p>
+                     ))}
+                  </div>
+               </CollapsibleTemplate>
             </div>
          </div>
       </main>
    );
 };
-
 export default Details;

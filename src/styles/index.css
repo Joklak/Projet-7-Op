@@ -60,8 +60,13 @@ nav a {
 }
 .banner_home_about {
    width: 100%;
-   height: 223px;
+   height: 255px;
    position: relative;
+   margin-bottom: 31px;
+   border-radius: 20px;
+   overflow: hidden;
+   display: flex;
+   z-index: 1;
 }
 .banner_text {
    width: 100%;
@@ -87,6 +92,15 @@ nav a {
    background-size: contain;
    background-position: center;
    width: 100%;
+}
+
+.banner_img_web {
+   background-size: contain;
+   background-position: center;
+   width: 100%;
+}
+.banner_img_mobile {
+   display: none;
 }
 
 .gallery_thumb {
@@ -293,10 +307,11 @@ body {
    display: flex;
    flex-direction: column;
    align-items: center;
-   gap: 30px;
-   width: 100%;
+   gap: 31px;
+   width: 85%;
    margin-bottom: 30px;
 }
+
 .aboutbutton-icon {
    transition: transform 0.2s ease-in-out;
 }
@@ -304,6 +319,13 @@ body {
 .aboutbutton-icon-open {
    transform: rotate(180deg);
 }
+.collapsible-button-label {
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
 .abouttext {
    background-color: #f7f7f7;
    color: #ff6060;
@@ -312,13 +334,169 @@ body {
    font-family: 'Montserrat';
    text-align: center;
    font-weight: 400;
-
    text-align: left;
    padding-left: 20px;
    margin-top: 0px;
 }
+
 .collapse_text {
    margin-top: 30px;
+}
+
+.collapsible {
+   max-height: 500px;
+   overflow: hidden;
+   transition: max-height 0.7s ease-out;
+   width: 100%;
+   border-radius: 10px;
+}
+
+.collapsible-close-height {
+   max-height: 300px;
+   overflow: hidden;
+   width: 100%;
+   transition: max-height 0.7s ease-out;
+}
+
+.content-open {
+   background: #f7f7f7;
+   padding-top: 30px;
+   text-align: left;
+   border-radius: 10px;
+   padding-right: 12px;
+   padding-left: 20px;
+   padding-bottom: 15px;
+}
+.description_text {
+   background: #f7f7f7;
+   border-radius: 10px;
+   margin-top: 0px;
+   margin-bottom: 7px;
+   font-family: 'Montserrat';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 18px;
+}
+.description_text_about {
+   font-family: 'Montserrat';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 24px;
+   color: #ff6060;
+   margin-top: -3px;
+   margin-bottom: 4px;
+   margin-right: 15px;
+   margin-left: -2px;
+   text-align: left;
+}
+.collapsibles-container {
+   display: flex;
+   width: 100%;
+   gap: 76px;
+   margin-bottom: 14px;
+}
+
+.collapsible-open-height {
+   max-height: 1000px;
+   transition: max-height 0.3s ease-in;
+}
+
+.collapsible-button-icon {
+   transition: transform 0.3s ease-in-out;
+}
+
+.rotate-open {
+   transform: rotate(180deg);
+}
+.slideshow-container {
+   position: relative;
+   width: 100%;
+   height: auto;
+   overflow: hidden;
+}
+
+.slideshow-image-container {
+   position: relative;
+   width: 100%;
+   height: auto;
+   overflow: hidden;
+}
+
+.slideshow-image {
+   position: relative;
+   width: 100%;
+   height: auto;
+   background-size: cover;
+   background-position: center center;
+   background-repeat: no-repeat;
+}
+
+.slideshow-slider {
+   position: relative;
+   width: 100%;
+   height: auto;
+   display: flex;
+   transition: transform 0.3s ease-in-out;
+}
+
+.slideshow-button-container {
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 100%;
+   z-index: 1;
+}
+
+.slideshow-button {
+   background: transparent;
+   border: none;
+   cursor: pointer;
+   outline: none;
+   padding: 0;
+}
+
+.slideshow-arrow {
+   width: 30px;
+   height: 30px;
+}
+
+.slideshow-counter {
+   position: absolute;
+   bottom: 10px;
+   right: 10px;
+   background-color: rgba(0, 0, 0, 0.5);
+   color: white;
+   padding: 5px;
+   font-size: 12px;
+   z-index: 1;
+}
+
+.collapsible-button-label {
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   height: 52px;
+   background: #ff6060;
+   border-radius: 10px;
+   font-family: 'Montserrat';
+   font-style: normal;
+   font-weight: 500;
+   font-size: 18px;
+   color: white;
+   padding-right: 18px;
+   padding-left: 20px;
+   border: none;
+}
+.collapsible-button-content p.hidden {
+   display: none;
+}
+.collapsible-button-label > svg {
+   width: 20px;
+   height: auto;
 }
 .mainabout {
    display: flex;
@@ -330,7 +508,6 @@ body {
    justify-content: space-between;
    width: 100%;
    margin-top: 30px;
-   align-items: center;
 }
 
 .description_equipement_collapse {
@@ -466,6 +643,14 @@ body {
    font-weight: 500;
    font-size: 18px;
 }
+.host_firstname {
+   margin-top: 6px;
+   margin-bottom: 5px;
+}
+.host_lastname {
+   margin-top: 6px;
+   margin-bottom: 5px;
+}
 .host_picture {
    border-radius: 50%;
    height: 64px;
@@ -512,6 +697,12 @@ body {
       overflow: hidden;
       display: flex;
       z-index: 1;
+   }
+   .banner_img_web {
+      display: none;
+   }
+   .banner_img_mobile {
+      display: initial;
    }
 
    .banner_text {
@@ -657,7 +848,6 @@ body {
       font-size: 12px;
    }
    .testcolonne {
-      margin-top: 19px;
       gap: 0px;
    }
 }

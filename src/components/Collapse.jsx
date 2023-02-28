@@ -1,30 +1,52 @@
 import React, { useState } from 'react';
-import { FiChevronDown } from 'react-icons/fi';
 
-const CollapseExample = (props) => {
+function CollapsibleTemplate(props) {
    const [isOpen, setIsOpen] = useState(false);
-
-   const handleButtonClick = () => {
-      setIsOpen(!isOpen);
-   };
+   const { label, children, fontSize } = props;
 
    return (
-      <div className="aboutpage">
-         <button className="aboutbutton" onClick={handleButtonClick}>
-            <span className="aboutbutton-text">{props.text}</span>
-            <FiChevronDown
-               className={`aboutbutton-icon ${
-                  isOpen ? 'aboutbutton-icon-open' : ''
-               }`}
-            />
+      <div
+         className={`${
+            isOpen ? 'collapsible' : 'collapsible collapsible-close-height'
+         }`}
+      >
+         <button
+            className="collapsible-button-label"
+            style={{ fontSize }}
+            onClick={() => setIsOpen(!isOpen)}
+         >
+            {label}
+            {
+               <svg
+                  className={`${
+                     isOpen
+                        ? 'collapsible-button-icon rotate-open'
+                        : 'collapsible-button-icon'
+                  }`}
+                  viewBox="0 0 28 17"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+               >
+                  <path
+                     d="M24.84 16.3466L27.2 13.9733L14 0.786621L0.80001 13.9866L3.16001 16.3466L14 5.50662L24.84 16.3466Z"
+                     fill="white"
+                  />
+               </svg>
+            }
          </button>
-         {isOpen && (
-            <div className="abouttext">
-               <p className="collapse_text">{props.textContent}</p>
+         {
+            <div
+               className={`${
+                  isOpen
+                     ? 'collapsible-button-content content-open'
+                     : 'collapsible-button-content content-closed'
+               }`}
+            >
+               {isOpen ? children : <p className="hidden">{children}</p>}
             </div>
-         )}
+         }
       </div>
    );
-};
+}
 
-export default CollapseExample;
+export default CollapsibleTemplate;
