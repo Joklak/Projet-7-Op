@@ -35,7 +35,11 @@ export default function About() {
                   confiance.
                </p>
             </CollapsibleTemplate>
-            <CollapsibleTemplate label="Responsabilité" fontSize={24}>
+            <CollapsibleTemplate
+               label="Responsabilité"
+               fontSize={24}
+               className="testsalut"
+            >
                <p className="description_text_about">
                   Nous sommes conscients de notre responsabilité envers nos
                   clients et envers l'environnement. Nous nous engageons à

@@ -20,8 +20,8 @@ function CollapsibleTemplate(props) {
                <svg
                   className={`${
                      isOpen
-                        ? 'collapsible-button-icon rotate-open'
-                        : 'collapsible-button-icon'
+                        ? 'collapsible-button-icon'
+                        : 'collapsible-button-icon rotate-open'
                   }`}
                   viewBox="0 0 28 17"
                   fill="none"

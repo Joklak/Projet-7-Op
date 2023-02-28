@@ -21,7 +21,7 @@ const Details = () => {
 
    return (
       <main className="maindetail">
-         <SliderComponent pictures={pictures} />
+         <SliderComponent slides={pictures} />
          <div className="singleproduct_information">
             <div className="singleproduct_container">
                <div>
