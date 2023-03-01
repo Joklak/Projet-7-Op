@@ -268,13 +268,6 @@ body {
    margin-bottom: 30px;
 }
 
-.collapsible-button-label {
-   width: 100%;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-}
-
 .collapse_text {
    margin-top: 30px;
 }
@@ -298,9 +291,13 @@ body {
    background: #f7f7f7;
    padding-top: 30px;
    text-align: left;
+   margin-top: -7px;
    padding-right: 12px;
    padding-left: 20px;
    padding-bottom: 15px;
+   position: relative;
+   border-radius: 10px;
+   z-index: 1;
 }
 .description_text {
    background: #f7f7f7;
@@ -440,6 +437,8 @@ body {
    padding-right: 18px;
    padding-left: 20px;
    border: none;
+   position: relative;
+   z-index: 5;
 }
 .collapsible-button-content p.hidden {
    display: none;
@@ -546,7 +545,7 @@ body {
    margin-left: 10px;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 450px) {
    body {
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;

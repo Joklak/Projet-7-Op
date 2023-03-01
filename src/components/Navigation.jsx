@@ -18,12 +18,12 @@ const Navigation = () => {
             <nav className="navigationlink">
                <ul>
                   <li>
-                     <NavLink exact to="/" activeClassName="active">
+                     <NavLink exact="true" to="/" activeclassname="active">
                         Accueil
                      </NavLink>
                   </li>
                   <li>
-                     <NavLink to="/about" activeClassName="active">
+                     <NavLink to="/about" activeclassname="active">
                         À propos
                      </NavLink>
                   </li>
