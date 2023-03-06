@@ -10,7 +10,6 @@ import Rating from '../components/Rating';
 
 const Details = () => {
    const { productid } = useParams();
-   console.log(productid);
    const product = products.find((product) => product.id === productid);
 
    if (!product) {

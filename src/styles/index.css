@@ -547,6 +547,7 @@ body {
 @media screen and (max-width: 850px) {
    .logement_products {
       flex-wrap: wrap;
+      grid-template-columns: repeat(2, 1fr);
    }
    main {
       margin-left: 20px;
@@ -557,7 +558,7 @@ body {
       padding-left: 40px;
    }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 767px) {
    body {
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
