@@ -42,7 +42,7 @@ function CollapsibleTemplate(props) {
                      : 'collapsible-button-content content-closed'
                }`}
             >
-               {isOpen ? children : <p className="hidden">{children}</p>}
+               {isOpen ? children : <div className="hidden">{children}</div>}
             </div>
          }
       </div>

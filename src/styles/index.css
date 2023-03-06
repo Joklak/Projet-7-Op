@@ -303,7 +303,7 @@ body {
    background: #f7f7f7;
    border-radius: 10px;
    margin-top: 0px;
-   margin-bottom: 7px;
+   margin-bottom: 0px;
    font-family: 'Montserrat';
    font-style: normal;
    font-weight: 400;
@@ -440,7 +440,7 @@ body {
    position: relative;
    z-index: 5;
 }
-.collapsible-button-content p.hidden {
+.collapsible-button-content div.hidden {
    display: none;
 }
 .collapsible-button-label > svg {
@@ -544,8 +544,20 @@ body {
    width: 30px;
    margin-left: 10px;
 }
-
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 850px) {
+   .logement_products {
+      flex-wrap: wrap;
+   }
+   main {
+      margin-left: 20px;
+      margin-right: 20px;
+   }
+   .banner_text {
+      padding: 10%;
+      padding-left: 40px;
+   }
+}
+@media screen and (max-width: 375px) {
    body {
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
